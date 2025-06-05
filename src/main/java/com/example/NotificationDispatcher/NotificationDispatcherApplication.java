@@ -8,6 +8,7 @@ public class NotificationDispatcherApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NotificationDispatcherApplication.class, args);
+		System.out.println("Notification Dispatcher Application is running...");
 	}
 
 }
