@@ -1,7 +1,17 @@
 spring:
   application:
     name: NotificationDispatcher
-
+  mail:
+    host:
+    port:
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth:
+          starttls:
+            enable:
 server:
   port: ${SERVER_PORT:8082}
   error:
@@ -12,3 +22,4 @@ server:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
