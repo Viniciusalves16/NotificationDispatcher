@@ -1,11 +1,6 @@
 # NotificationDispatcher
 A Aplicação de Notificação de Eventos de Pagamento é um componente crucial em nossa arquitetura, atuando como o elo final na comunicação do status de transações financeiras com nossos clientes.
 
-
-# Notification Dispatcher
-
-Notification Dispatcher is a Spring Boot application designed to send email notifications based on messages received from a Kafka topic. It processes payment-related messages and sends confirmation emails to clients.
-
 ## Features
 
 - Listens to a Kafka topic (`Contact_Topic`) for incoming messages.
