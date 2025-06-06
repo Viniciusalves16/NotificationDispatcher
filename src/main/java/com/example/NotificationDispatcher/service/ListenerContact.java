@@ -12,9 +12,12 @@ public class ListenerContact {
     // This service listens to the Kafka topic "Contact_Topic" and processes incoming contact messages.
 
     private DeserializedMessage deserializedMessage;
+    private EmailService emailService;
+
     private static final Logger logger = LoggerFactory.getLogger(ListenerContact.class);
 
-    public ListenerContact(DeserializedMessage deserializedMessage) {
+    public ListenerContact(DeserializedMessage deserializedMessage, EmailService emailService) {
+        this.emailService = emailService;
         this.deserializedMessage = deserializedMessage;
     }
 
@@ -28,7 +31,8 @@ public class ListenerContact {
 
         RequestContactTopic requestContactTopic = deserializedMessage.deserializeRequestTopic(message);
 
-
+        emailService.sendEmail(requestContactTopic);
+        logger.info("Email send : {}", requestContactTopic);
 
 
     }
