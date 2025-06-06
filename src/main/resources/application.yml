@@ -2,16 +2,16 @@ spring:
   application:
     name: NotificationDispatcher
   mail:
-    host:
-    port:
-    username:
-    password:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     properties:
       mail:
         smtp:
-          auth:
+          auth: true
           starttls:
-            enable:
+            enable: true
 server:
   port: ${SERVER_PORT:8082}
   error:
