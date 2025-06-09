@@ -23,12 +23,8 @@ A Aplicação de Notificação de Eventos de Pagamento é um componente crucial 
 
 - Java 17 or higher
 - Apache Kafka running locally or on a server
-- SMTP server for sending emails
+- JavaMailSender
 - Maven for building the project
 
 ## Setup and Configuration
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/NotificationDispatcher.git
-   cd NotificationDispatcher
